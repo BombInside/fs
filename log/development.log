@@ -4,3 +4,37 @@
   [1m[36m (11.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
   [1m[35m (25.3ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
   [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (14.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateItems (20150225084204)
+  [1m[35m (12.3ms)[0m  CREATE TABLE `items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `price` float, `name` varchar(255), `description` varchar(255), `comppany_name` varchar(255), `real` tinyint(1), `show_price` tinyint(1), `weith` float, `delivery_date` date, `torg_start` datetime, `torg_end` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20150225084204"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mSQL (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (10.2ms)[0m  INSERT INTO `items` (`created_at`, `price`, `real`, `updated_at`, `weith`) VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 25 Feb 2015 09:06:25 UTC +00:00], ["price", 100.0], ["real", true], ["updated_at", Wed, 25 Feb 2015 09:06:25 UTC +00:00], ["weith", 10.0]]
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (10.2ms)[0m  BEGIN
+  [1m[36mSQL (14.5ms)[0m  [1mINSERT INTO `items` (`created_at`, `description`, `name`, `price`, `real`, `updated_at`, `weith`) VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 25 Feb 2015 09:08:50 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis orci et tortor pellentesque, sed ultricies dui efficitur. Pellentesque scelerisque, enim non gravida efficitur, quam odio volutpat nunc, ac accumsan eros purus a ligula. Fusce sed iaculis arcu. Donec id lobortis magna. Integer in facilisis arcu. Praesent gravida elit vitae neque accumsan, non dictum enim suscipit. Fusce volutpat rutrum urna, sed commodo risus venenatis ut. Ut tristique massa lectus, nec vehicula nibh vestibulum a. Mauris porta justo vel euismod volutpat. Aenean vestibulum lacinia risus a posuere. Nullam bibendum auctor mauris in interdum. Vivamus sit amet enim sed enim pretium pellentesque."], ["name", "bomb"], ["price", 120.5], ["real", true], ["updated_at", Wed, 25 Feb 2015 09:08:50 UTC +00:00], ["weith", 55.0]]
+Mysql::Error: Data too long for column 'description' at row 1: INSERT INTO `items` (`created_at`, `description`, `name`, `price`, `real`, `updated_at`, `weith`) VALUES (?, ?, ?, ?, ?, ?, ?)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `items` (`created_at`, `description`, `name`, `price`, `real`, `updated_at`, `weith`) VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 25 Feb 2015 09:08:50 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis orci et tortor pellentesque, sed ultricies dui efficitur. Pellentesque scelerisque, enim non gravida efficitur, quam odio volutpat nunc, ac accumsan eros purus a ligula. Fusce sed iaculis arcu. Donec id lobortis magna. Integer in facilisis arcu. Praesent gravida elit vitae neque accumsan, non dictum enim suscipit. Fusce volutpat rutrum urna, sed commodo risus venenatis ut. Ut tristique massa lectus, nec vehicula nibh vestibulum a. Mauris porta justo vel euismod volutpat. Aenean vestibulum lacinia risus a posuere. Nullam bibendum auctor mauris in interdum. Vivamus sit amet enim sed enim pretium pellentesque."], ["name", "bomb"], ["price", 120.5], ["real", true], ["updated_at", Wed, 25 Feb 2015 09:08:50 UTC +00:00], ["weith", 55.0]]
+Mysql::Error: Data too long for column 'description' at row 1: INSERT INTO `items` (`created_at`, `description`, `name`, `price`, `real`, `updated_at`, `weith`) VALUES (?, ?, ?, ?, ?, ?, ?)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to CreateItems (20150225084204)
+  [1m[36m (11.4ms)[0m  [1mDROP TABLE `items`[0m
+  [1m[35mSQL (3.9ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20150225084204'
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateItems (20150225084204)
+  [1m[35m (10.3ms)[0m  CREATE TABLE `items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `price` float, `name` varchar(255), `description` text, `comppany_name` varchar(255), `real` tinyint(1), `show_price` tinyint(1), `weigth` float, `delivery_date` date, `torg_start` datetime, `torg_end` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20150225084204"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mSQL (1.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (15.6ms)[0m  INSERT INTO `items` (`created_at`, `description`, `name`, `price`, `real`, `show_price`, `updated_at`, `weigth`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 25 Feb 2015 09:15:03 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis orci et tortor pellentesque, sed ultricies dui efficitur. Pellentesque scelerisque, enim non gravida efficitur, quam odio volutpat nunc, ac accumsan eros purus a ligula. Fusce sed iaculis arcu. Donec id lobortis magna. Integer in facilisis arcu. Praesent gravida elit vitae neque accumsan, non dictum enim suscipit. Fusce volutpat rutrum urna, sed commodo risus venenatis ut. Ut tristique massa lectus, nec vehicula nibh vestibulum a. Mauris porta justo vel euismod volutpat. Aenean vestibulum lacinia risus a posuere. Nullam bibendum auctor mauris in interdum. Vivamus sit amet enim sed enim pretium pellentesque."], ["name", "First Item"], ["price", 150.2], ["real", true], ["show_price", true], ["updated_at", Wed, 25 Feb 2015 09:15:03 UTC +00:00], ["weigth", 55.6]]
+  [1m[36m (3.3ms)[0m  [1mCOMMIT[0m
