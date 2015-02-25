@@ -1,7 +1,65 @@
-<h1><%= @i.name %></h1>
+<style>
+	body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
 
-<ul>
-	<li><%= @i.price %></li>
-	<li><%= @i.weigth %></li>
-	<li><p><%= @i.description %></p></li>
-</ul>
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+footer {
+    margin: 50px 0;
+}
+</style>
+
+<div class="col-md-3">
+                <p class="lead">App )</p>
+                <div class="list-group">
+                    <!-- <a href="#" class="list-group-item active">Category 1</a>
+                    <a href="#" class="list-group-item">Category 2</a>
+                    <a href="#" class="list-group-item">Category 3</a> -->
+                </div>
+            </div>
+
+
+             <div class="col-md-9">
+
+                <div class="thumbnail">
+                    <img class="img-responsive" src="http://placehold.it/800x300" alt="">
+                    <div class="caption-full">
+                        <h4 class="pull-right"><%= @i.price %> грн.</h4> 
+
+                        
+                        <h4><a href="#"><%= @i.name %></a>
+                        </h4>
+                        
+                        <p><%= @i.description %></p>
+                    </div>
+                    <div class="ratings">
+                        <p class="pull-right">3 reviews</p>
+                        <p>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            4.0 stars
+                        </p>
+                    </div>
+                </div>
+

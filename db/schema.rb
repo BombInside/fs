@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150225123453) do
+ActiveRecord::Schema.define(version: 20150225163156) do
 
   create_table "items", force: true do |t|
     t.float    "price"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20150225123453) do
     t.datetime "torg_end"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo"
   end
 
   add_index "items", ["delivery_date"], name: "index_items_on_delivery_date", using: :btree
