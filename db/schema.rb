@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150225084204) do
+ActiveRecord::Schema.define(version: 20150225093957) do
 
   create_table "items", force: true do |t|
     t.float    "price"
@@ -27,5 +27,33 @@ ActiveRecord::Schema.define(version: 20150225084204) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "items", ["delivery_date"], name: "index_items_on_delivery_date", using: :btree
+  add_index "items", ["name"], name: "index_items_on_name", using: :btree
+  add_index "items", ["price"], name: "index_items_on_price", using: :btree
+  add_index "items", ["torg_end"], name: "index_items_on_torg_end", using: :btree
+  add_index "items", ["torg_start"], name: "index_items_on_torg_start", using: :btree
+  add_index "items", ["weigth"], name: "index_items_on_weigth", using: :btree
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "surname"
+    t.date     "birth_date"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "country"
+    t.string   "town"
+    t.string   "state"
+    t.boolean  "deleted"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["country"], name: "index_users_on_country", using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", using: :btree
+  add_index "users", ["name"], name: "index_users_on_name", using: :btree
+  add_index "users", ["phone"], name: "index_users_on_phone", using: :btree
+  add_index "users", ["surname"], name: "index_users_on_surname", using: :btree
+  add_index "users", ["town"], name: "index_users_on_town", using: :btree
 
 end

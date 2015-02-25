@@ -13,5 +13,11 @@ class CreateItems < ActiveRecord::Migration
       t.datetime :torg_end
       t.timestamps
     end
+    add_index :items, :price
+    add_index :items, :name
+    add_index :items, :torg_start
+    add_index :items, :torg_end
+    add_index :items, :weigth
+    add_index :items, :delivery_date
   end
 end
