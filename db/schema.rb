@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150225093957) do
+ActiveRecord::Schema.define(version: 20150225123453) do
 
   create_table "items", force: true do |t|
     t.float    "price"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20150225093957) do
     t.boolean  "deleted"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password"
   end
 
   add_index "users", ["country"], name: "index_users_on_country", using: :btree
