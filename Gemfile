@@ -9,6 +9,10 @@ gem 'mysql2'
 gem 'mysql'
 gem 'validates_email_format_of'
 gem 'protected_attributes'
+
+
+
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

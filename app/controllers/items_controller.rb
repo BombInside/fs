@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
 	end
 
 	def show
-		
+		@i = Item.where(id: params[:id]).first		
 	end
 
 	def new

@@ -1,5 +1,13 @@
 
-Your application root is located in: <%= Rails.root.to_s %><br>
+<div class="container" >
+	<% @items.each do |item| %>
+	<%= item.name %> <span>|</span> <%= item.price %>
+	<% end %>
+</div> 
+<br>
+
+
+
 
 Ruby version: <%= RUBY_VERSION %><br>
 
