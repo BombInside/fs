@@ -6,6 +6,9 @@
 <%= f.label "Вес" %>:
   <p><%= f.text_field :weigth %></p><br />
 
+    <%= f.file_field :i_photo %> <br>
+    <%= image_tag @i.i_photo.url(:thumb) %> <br>
+
 <%= f.label "Видимый" %>:
   <p><%= f.text_field :real %></p><br />
 <%= f.label "Краткое описание" %>:

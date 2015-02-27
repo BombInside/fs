@@ -11,6 +11,8 @@ gem 'validates_email_format_of'
 gem 'protected_attributes'
 gem 'high_voltage'
 #gem 'acts_as_votable'
+gem 'paperclip'
+#gem 'redactor-rails'
 
 
 
@@ -41,7 +43,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+# gem 'bcrypt-ruby'
 
 # Use unicorn as the app server
 # gem 'unicorn'

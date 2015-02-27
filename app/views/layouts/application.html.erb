@@ -12,9 +12,9 @@
     <meta name="author" content="Bomb Inside">
     <%= favicon_link_tag 'favicon.ico' %>
 
-    <title>Bare - Start Bootstrap Template</title>
+    <title><%= render text: request.host %></title>
 
-    <!-- Bootstrap Core CSS -->
+    <!-- Bootstrap Cohostre CSS -->
       <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -58,7 +58,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<%= root_path %>">App name</a>
+                <a class="navbar-brand" href="<%= root_path %>"><%= render text: request.host %></a>
             </div>
             
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

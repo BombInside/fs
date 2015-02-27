@@ -56,11 +56,11 @@ class ItemsController < ApplicationController
 
 	private
 		def find_item
-			@i = Item.where(params[:id]).first
+			@i = Item.find(params[:id])
 			render_404 unless @i
 		end
 
 		def is_admin
-			render_403 unless params[:admin] #current_user.admin == true
+			#render_403 unless params[:admin] #current_user.admin == true
 		end
 end

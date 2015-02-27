@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150226122016) do
+ActiveRecord::Schema.define(version: 20150227142511) do
 
   create_table "items", force: true do |t|
     t.float    "price"
@@ -28,8 +28,12 @@ ActiveRecord::Schema.define(version: 20150226122016) do
     t.datetime "updated_at"
     t.string   "photo"
     t.text     "short_desc"
-    t.integer  "votes_count",   default: 0
-    t.integer  "bit_count",     default: 0
+    t.integer  "votes_count",          default: 0
+    t.integer  "bit_count",            default: 0
+    t.string   "i_photo_file_name"
+    t.string   "i_photo_content_type"
+    t.integer  "i_photo_file_size"
+    t.datetime "i_photo_updated_at"
   end
 
   add_index "items", ["delivery_date"], name: "index_items_on_delivery_date", using: :btree
@@ -54,6 +58,11 @@ ActiveRecord::Schema.define(version: 20150226122016) do
     t.string   "password"
     t.boolean  "is_admin"
     t.string   "user_pic"
+    t.string   "login"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["country"], name: "index_users_on_country", using: :btree
@@ -62,5 +71,20 @@ ActiveRecord::Schema.define(version: 20150226122016) do
   add_index "users", ["phone"], name: "index_users_on_phone", using: :btree
   add_index "users", ["surname"], name: "index_users_on_surname", using: :btree
   add_index "users", ["town"], name: "index_users_on_town", using: :btree
+
+  create_table "votes", force: true do |t|
+    t.integer  "votable_id"
+    t.string   "votable_type"
+    t.integer  "voter_id"
+    t.string   "voter_type"
+    t.boolean  "vote_flag"
+    t.string   "vote_scope"
+    t.integer  "vote_weight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope", using: :btree
+  add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
 
 end
