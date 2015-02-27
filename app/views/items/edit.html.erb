@@ -1,19 +1,16 @@
-
-
-
 <%= form_for @i do |f| %>
- <p> <%= f.label "Имя" %>:</p>
+ <%= f.label "Имя" %>:
   <p><%= f.text_field :name %></p><br />
-  <p><%= f.label "Цена" %>:</p>
+ <%= f.label "Цена" %>:
   <p><%= f.text_field :price %></p><br />
-    <p><%= f.label "Вес" %>:</p>
+<%= f.label "Вес" %>:
   <p><%= f.text_field :weigth %></p><br />
 
-  <p><%= f.label "Видимый" %>:</p>
+<%= f.label "Видимый" %>:
   <p><%= f.text_field :real %></p><br />
-  <p><%= f.label "Краткое описание" %>:</p>
+<%= f.label "Краткое описание" %>:
   <p><%= f.text_area :short_desc %><br /></p>
-  <p><%= f.label "Полное описание" %>:</p>
+<%= f.label "Полное описание" %>:
   <p><%= f.text_area :description %><br /></p>
 
   <%= f.submit "Создать" %>

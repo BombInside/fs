@@ -1,7 +1,8 @@
 class Item < ActiveRecord::Base
-   attr_accessible :price, :name, :description, :real
+
+   attr_accessible :price, :name, :description, :real, :short_desc, :weigth
    validates :price,  numericality: { greater_than: 0, allow_nil: true } 
-   validates :description, :name, presence: true
+   validates :description, :name, :short_desc, presence: true
 
    #Асоциации
    

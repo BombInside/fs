@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150225163156) do
+ActiveRecord::Schema.define(version: 20150226122016) do
 
   create_table "items", force: true do |t|
     t.float    "price"
@@ -27,6 +27,9 @@ ActiveRecord::Schema.define(version: 20150225163156) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo"
+    t.text     "short_desc"
+    t.integer  "votes_count",   default: 0
+    t.integer  "bit_count",     default: 0
   end
 
   add_index "items", ["delivery_date"], name: "index_items_on_delivery_date", using: :btree
@@ -49,6 +52,8 @@ ActiveRecord::Schema.define(version: 20150225163156) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password"
+    t.boolean  "is_admin"
+    t.string   "user_pic"
   end
 
   add_index "users", ["country"], name: "index_users_on_country", using: :btree

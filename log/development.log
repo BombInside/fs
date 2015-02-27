@@ -202,3 +202,40 @@ Migrating to AddPhoto2Item (20150225163156)
   [1m[35mSQL (1.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20150225163156"]]
   [1m[36m (3.8ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to Add2ItemsShortDesc (20150226085243)
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to Add2ItemsShortDesc (20150226085243)
+  [1m[35m (45.4ms)[0m  ALTER TABLE `items` ADD `short_desc` text
+  [1m[36m (27.5ms)[0m  [1mALTER TABLE `users` ADD `is_admin` tinyint(1)[0m
+  [1m[35m (19.2ms)[0m  ALTER TABLE `users` ADD `user_pic` varchar(255)
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20150226085243"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mSQL (1.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (9.8ms)[0m  INSERT INTO `items` (`created_at`, `description`, `name`, `photo`, `price`, `real`, `short_desc`, `updated_at`, `weigth`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 26 Feb 2015 09:00:07 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus egestas posuere lectus quis iaculis. Nulla vel augue sed diam consectetur suscipit vitae nec odio. Donec nec justo interdum, posuere leo quis, efficitur magna. Maecenas dapibus nisl et diam bibendum molestie et at eros. Aliquam fringilla libero tortor, et bibendum nisl volutpat id. Aenean pretium libero vitae finibus gravida. Praesent fringilla rutrum tortor eu finibus. Sed interdum et erat et ultricies. Mauris quis aliquet orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec ligula fermentum, blandit libero ac, pharetra dui. Mauris lacinia fermentum feugiat. Donec tempus vitae nibh quis hendrerit. Ut luctus, urna in venenatis facilisis, augue dolor tincidunt diam, ac viverra neque nisl sit amet leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed pulvinar bibendum mauris, vel molestie enim pulvinar quis."], ["name", "Second Item"], ["photo", "60.png"], ["price", 55.16], ["real", true], ["short_desc", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus egestas posuere lectus quis iaculis. Nulla vel augue sed diam consectetur suscipit vitae nec odio"], ["updated_at", Thu, 26 Feb 2015 09:00:07 UTC +00:00], ["weigth", 150.65]]
+  [1m[36m (12.8ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddUpvote (20150226122016)
+  [1m[35m (33.2ms)[0m  ALTER TABLE `items` ADD `votes_count` int(11) DEFAULT 0
+  [1m[36m (15.2ms)[0m  [1mALTER TABLE `items` ADD `bit_count` int(11) DEFAULT 0[0m
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES (?)[0m  [["version", "20150226122016"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ActsAsVotableMigration (20150226132102)
+  [1m[35m (24.0ms)[0m  CREATE TABLE `votes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `votable_id` int(11), `votable_type` varchar(255), `voter_id` int(11), `voter_type` varchar(255), `vote_flag` tinyint(1), `vote_scope` varchar(255), `vote_weight` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (20.2ms)[0m  [1mCREATE INDEX `index_votes_on_voter_id_and_voter_type_and_vote_scope` ON `votes` (`voter_id`, `voter_type`, `vote_scope`) [0m
+  [1m[35m (13.2ms)[0m  CREATE INDEX `index_votes_on_votable_id_and_votable_type_and_vote_scope` ON `votes` (`votable_id`, `votable_type`, `vote_scope`) 
+  [1m[36mSQL (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20150226132102"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to ActsAsVotableMigration (20150226132102)
+  [1m[36m (18.5ms)[0m  [1mDROP TABLE `votes`[0m
+  [1m[35mSQL (3.6ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20150226132102'
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m

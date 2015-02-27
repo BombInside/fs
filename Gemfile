@@ -9,7 +9,8 @@ gem 'mysql2'
 gem 'mysql'
 gem 'validates_email_format_of'
 gem 'protected_attributes'
-
+gem 'high_voltage'
+#gem 'acts_as_votable'
 
 
 
