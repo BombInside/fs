@@ -1,0 +1,29 @@
+<%= form_for(@bits_1) do |f| %>
+  <% if @bits_1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bits_1.errors.count, "error") %> prohibited this bits_1 from being saved:</h2>
+
+      <ul>
+      <% @bits_1.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :bit_cost %><br>
+    <%= f.text_field :bit_cost %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br>
+    <%= f.text_area :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

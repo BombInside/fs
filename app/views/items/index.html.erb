@@ -4,21 +4,22 @@
 <div class="container">
 
         <!-- Jumbotron Header -->
-        <header class="jumbotron hero-spacer">
+       <!-- <header class="jumbotron hero-spacer">
             <h1>A Warm Welcome!</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
             <p><a class="btn btn-primary btn-large">Call to action!</a>
             </p>
-        </header>
+          </header>
 
-        <hr>
+          <hr> -->
 
         <!-- Title -->
         <div class="row">
             <div class="col-lg-12">
-                <h3>Latest Features</h3>
+                <h3>Активные заявки</h3>
             </div>
-        </div>
+          </div>
+          <hr>
         <!-- /.row -->
 
         <!-- Page Features -->
@@ -29,20 +30,20 @@
                     <%= image_tag item.i_photo.url %>
                     <div class="caption">
                         <h3><%= item.name %></h3>
-                        <p><%= item.price %> грн.</p>
+                        <p><%= item.weigth %> kg.</p>
                         <p><%= item.short_desc %></p>
                         <p>
-                         <a href="<%= item_path(item) %>" class="btn btn-default">More Info</a>
+                         <a href="<%= item_path(item) %>" class="btn btn-default">Подробнее</a>
                          <!--   <%= link_to "Delete", item_path(item), method: :delete, data: { confirm: "Are U sure ?" }, :class=>"btn btn-danger" %> -->
-                            <span>Likes: <%= item.votes_count %></span>
+                         <!-- <span>Ставки: <%= item.votes_count %></span>
                             <%= link_to "", upvote_item_path(item), :class => "glyphicon glyphicon-thumbs-up" %>
-                            
+                            -->
                         </p>
                     </div>
                 </div>
             </div>
 	<% end %>
-            
+
 
         </div>
         <!-- /.row -->
@@ -53,31 +54,9 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                  <p>Copyright &copy; By Bomb Inside <%= Time.now.year %> </p>
                 </div>
             </div>
         </footer>
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Ruby version: <%= RUBY_VERSION %><br>
-
-Rails version: <%= Rails.version %><br>
-
-Time now: <%= Time.now.asctime %> <br>

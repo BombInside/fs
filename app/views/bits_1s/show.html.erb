@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @bits_1.user_id %>
+</p>
+
+<p>
+  <strong>Bit cost:</strong>
+  <%= @bits_1.bit_cost %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @bits_1.comment %>
+</p>
+
+<%= link_to 'Edit', edit_bits_1_path(@bits_1) %> |
+<%= link_to 'Back', bits_1s_path %>

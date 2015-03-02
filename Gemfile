@@ -13,6 +13,7 @@ gem 'high_voltage'
 #gem 'acts_as_votable'
 gem 'paperclip'
 #gem 'redactor-rails'
+gem 'devise', '3.2.2'
 
 
 
