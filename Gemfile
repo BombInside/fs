@@ -13,8 +13,8 @@ gem 'high_voltage'
 #gem 'acts_as_votable'
 gem 'paperclip'
 #gem 'redactor-rails'
-gem 'devise', '3.2.2'
-
+#gem 'devise', '3.2.2'
+gem 'bcrypt', '~> 3.1.7'
 
 
 # Use SCSS for stylesheets
@@ -44,7 +44,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby'
+ gem 'bcrypt-ruby'
 
 # Use unicorn as the app server
 # gem 'unicorn'

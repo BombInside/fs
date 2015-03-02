@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150302083851) do
+ActiveRecord::Schema.define(version: 20150302151125) do
 
   create_table "bits_1s", force: true do |t|
     t.integer  "user_id"
@@ -57,7 +57,12 @@ ActiveRecord::Schema.define(version: 20150302083851) do
   add_index "items", ["torg_start"], name: "index_items_on_torg_start", using: :btree
   add_index "items", ["weigth"], name: "index_items_on_weigth", using: :btree
 
-  create_table "users", force: true do |t|
+  create_table "users", id: false, force: true do |t|
+    t.string   "blah",                limit: 20
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.string   "name"
     t.string   "surname"
     t.date     "birth_date"
@@ -67,16 +72,12 @@ ActiveRecord::Schema.define(version: 20150302083851) do
     t.string   "town"
     t.string   "state"
     t.boolean  "deleted"
+    t.boolean  "admin"
+    t.string   "password"
+    t.string   "login"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "password"
-    t.boolean  "is_admin"
-    t.string   "user_pic"
-    t.string   "login"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
+    t.string   "password_digest"
   end
 
   add_index "users", ["country"], name: "index_users_on_country", using: :btree
