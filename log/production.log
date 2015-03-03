@@ -948,3 +948,2068 @@ I, [2015-03-02T19:50:41.385794 #11659]  INFO -- :   Rendered users/index.html.er
 I, [2015-03-02T19:50:41.395770 #11659]  INFO -- :   Rendered text template (0.1ms)
 I, [2015-03-02T19:50:41.396593 #11659]  INFO -- :   Rendered text template (0.0ms)
 I, [2015-03-02T19:50:41.397502 #11659]  INFO -- : Completed 200 OK in 29ms (Views: 24.2ms | ActiveRecord: 0.9ms)
+I, [2015-03-02T19:59:25.038355 #11656]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 19:59:25 +0000
+I, [2015-03-02T19:59:25.057021 #11656]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T19:59:25.070705 #11656]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (3.9ms)
+I, [2015-03-02T19:59:25.071444 #11656]  INFO -- : Completed 500 Internal Server Error in 14ms
+F, [2015-03-02T19:59:25.080760 #11656] FATAL -- : 
+ActionView::Template::Error (/home/rails/app/views/sessions/new.html.erb:21: syntax error, unexpected keyword_end
+ ';@output_buffer.append=( end );@output_buffer.to_s
+                              ^
+/home/rails/app/views/sessions/new.html.erb:22: syntax error, unexpected keyword_ensure, expecting ')'
+/home/rails/app/views/sessions/new.html.erb:24: syntax error, unexpected keyword_end, expecting ')'):
+    18:  <%= form_tag sessions_path do %>
+    19:          <h2 class="form-signin-heading">Войдите в Систему</h2>
+    20:          <%= label_tag 'email', 'Email' %>
+    21:  <%= end %>
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__2604261411899158981__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__3644384349087576276__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn:126:in `<top (required)>'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `load'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `<main>'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `eval'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-03-02T20:09:30.204890 #11651]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 20:09:30 +0000
+I, [2015-03-02T20:09:30.296682 #11651]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T20:09:30.306639 #11651]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (2.2ms)
+I, [2015-03-02T20:09:30.307103 #11651]  INFO -- : Completed 500 Internal Server Error in 10ms
+F, [2015-03-02T20:09:30.312983 #11651] FATAL -- : 
+ActionView::Template::Error (/home/rails/app/views/sessions/new.html.erb:21: syntax error, unexpected keyword_end
+ ';@output_buffer.append=( end );@output_buffer.to_s
+                              ^
+/home/rails/app/views/sessions/new.html.erb:22: syntax error, unexpected keyword_ensure, expecting ')'
+/home/rails/app/views/sessions/new.html.erb:24: syntax error, unexpected keyword_end, expecting ')'):
+    18:  <%= form_tag sessions_path do %>
+    19:          <h2 class="form-signin-heading">Войдите в Систему</h2>
+    20:          <%= label_tag 'email', 'Email' %>
+    21:  <%= end %>
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__2604261411899158981__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__3644384349087576276__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn:126:in `<top (required)>'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `load'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `<main>'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `eval'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-03-02T20:11:09.686476 #11659]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 20:11:09 +0000
+I, [2015-03-02T20:11:09.740006 #11659]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T20:11:09.747660 #11659]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (2.8ms)
+I, [2015-03-02T20:11:09.748039 #11659]  INFO -- : Completed 500 Internal Server Error in 8ms
+F, [2015-03-02T20:11:09.750608 #11659] FATAL -- : 
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    15:         <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+    16:       </form>
+    17: 
+    18: <%= form_for @i, :url => sessions_path, :class => "form-signin" do |f| %>
+    19: <h2 class="form-signin-heading">Войдите в Систему</h2>
+    20:   <div class="form-group">
+    21:   <%= f.label "Имя", :class => "sr-only" %>:
+  app/views/sessions/new.html.erb:18:in `_app_views_sessions_new_html_erb___573818904629291545_37927900'
+
+
+I, [2015-03-02T20:12:27.570492 #11651]  INFO -- : Started GET "/" for 220.181.108.172 at 2015-03-02 20:12:27 +0000
+I, [2015-03-02T20:12:27.594964 #11651]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-02T20:12:27.607559 #11651]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T20:12:27.608030 #11651]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.7ms)
+I, [2015-03-02T20:12:27.620632 #11651]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T20:12:27.622091 #11651]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T20:12:27.623197 #11651]  INFO -- : Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T20:12:28.050244 #11656]  INFO -- : Started GET "/" for 220.181.108.172 at 2015-03-02 20:12:28 +0000
+I, [2015-03-02T20:12:28.182733 #11656]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-02T20:12:28.198096 #11656]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T20:12:28.198563 #11656]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.8ms)
+I, [2015-03-02T20:12:28.210479 #11656]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:12:28.211754 #11656]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:12:28.212994 #11656]  INFO -- : Completed 200 OK in 30ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T20:12:49.634413 #11651]  INFO -- : Started GET "/" for 123.125.71.89 at 2015-03-02 20:12:49 +0000
+I, [2015-03-02T20:12:49.641946 #11651]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-02T20:12:49.650197 #11651]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:12:49.650826 #11651]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.8ms)
+I, [2015-03-02T20:12:49.662094 #11651]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T20:12:49.663410 #11651]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T20:12:49.664141 #11651]  INFO -- : Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T20:12:50.382123 #11659]  INFO -- : Started GET "/" for 123.125.71.80 at 2015-03-02 20:12:50 +0000
+I, [2015-03-02T20:12:50.389423 #11659]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-02T20:12:50.394669 #11659]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:12:50.394905 #11659]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.7ms)
+I, [2015-03-02T20:12:50.401581 #11659]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:12:50.402089 #11659]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:12:50.402706 #11659]  INFO -- : Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T20:13:32.596254 #11651]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 20:13:32 +0000
+I, [2015-03-02T20:13:32.604571 #11651]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T20:13:32.654217 #11651]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (43.7ms)
+I, [2015-03-02T20:13:32.654524 #11651]  INFO -- : Completed 500 Internal Server Error in 50ms
+F, [2015-03-02T20:13:32.656704 #11651] FATAL -- : 
+ActionView::Template::Error (undefined local variable or method `session_path' for #<#<Class:0x00000004336d38>:0x00000002f9a9a0>):
+    15:         <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+    16:       </form>
+    17: 
+    18: <%= form_tag session_path do %>
+    19: 
+    20: 
+    21: <% end %>
+  app/views/sessions/new.html.erb:18:in `_app_views_sessions_new_html_erb___573818904629291545_24954360'
+
+
+I, [2015-03-02T20:13:59.774684 #14243]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 20:13:59 +0000
+I, [2015-03-02T20:13:59.790814 #14243]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T20:13:59.810631 #14243]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (9.6ms)
+I, [2015-03-02T20:13:59.810861 #14243]  INFO -- : Completed 500 Internal Server Error in 20ms
+F, [2015-03-02T20:13:59.812714 #14243] FATAL -- : 
+ActionView::Template::Error (undefined local variable or method `session_path' for #<#<Class:0x00000005653da8>:0x00000005653150>):
+    15:         <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+    16:       </form>
+    17: 
+    18: <%= form_tag session_path do %>
+    19: 
+    20: 
+    21: <% end %>
+  app/views/sessions/new.html.erb:18:in `_app_views_sessions_new_html_erb___1905131846838050098_45256700'
+
+
+I, [2015-03-02T20:14:12.603622 #14240]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 20:14:12 +0000
+I, [2015-03-02T20:14:12.626350 #14240]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T20:14:12.659371 #14240]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (17.0ms)
+I, [2015-03-02T20:14:12.659733 #14240]  INFO -- : Completed 500 Internal Server Error in 33ms
+F, [2015-03-02T20:14:12.663130 #14240] FATAL -- : 
+ActionView::Template::Error (undefined local variable or method `session_path' for #<#<Class:0x00000005648340>:0x00000005657688>):
+    15:         <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+    16:       </form>
+    17: 
+    18: <%= form_tag session_path do %>
+    19: 
+    20: 
+    21: <% end %>
+  app/views/sessions/new.html.erb:18:in `_app_views_sessions_new_html_erb___1905131846838050098_45265560'
+
+
+I, [2015-03-02T20:14:19.153818 #14243]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 20:14:19 +0000
+I, [2015-03-02T20:14:19.158037 #14243]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T20:14:19.161098 #14243]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (0.6ms)
+I, [2015-03-02T20:14:19.167149 #14243]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T20:14:19.167646 #14243]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:14:19.168257 #14243]  INFO -- : Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T20:15:21.277077 #14249]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 20:15:21 +0000
+I, [2015-03-02T20:15:21.314754 #14249]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T20:15:21.342060 #14249]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (3.9ms)
+I, [2015-03-02T20:15:21.342763 #14249]  INFO -- : Completed 500 Internal Server Error in 27ms
+F, [2015-03-02T20:15:21.353080 #14249] FATAL -- : 
+ActionView::Template::Error (/home/rails/app/views/sessions/new.html.erb:19: syntax error, unexpected keyword_end
+';@output_buffer.append=( end );@output_buffer.to_s
+                             ^
+/home/rails/app/views/sessions/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+/home/rails/app/views/sessions/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'):
+    16:       </form>
+    17: 
+    18: <%= form_for sessions_path do %>
+    19: <%= end %>
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__1059079595214923318__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2290178509531598167__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn:126:in `<top (required)>'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `load'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `<main>'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `eval'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-03-02T20:15:39.936563 #14243]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 20:15:39 +0000
+I, [2015-03-02T20:15:39.940629 #14243]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T20:15:39.944686 #14243]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (1.1ms)
+I, [2015-03-02T20:15:39.944911 #14243]  INFO -- : Completed 500 Internal Server Error in 4ms
+F, [2015-03-02T20:15:39.948357 #14243] FATAL -- : 
+ActionView::Template::Error (/home/rails/app/views/sessions/new.html.erb:19: syntax error, unexpected keyword_end
+';@output_buffer.append=( end );@output_buffer.to_s
+                             ^
+/home/rails/app/views/sessions/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+/home/rails/app/views/sessions/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'):
+    16:       </form>
+    17: 
+    18: <%= form_tag sessions_path do %>
+    19: <%= end %>
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__1059079595214923318__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2290178509531598167__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn:126:in `<top (required)>'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `load'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `<main>'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `eval'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-03-02T20:15:55.452635 #14246]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 20:15:55 +0000
+I, [2015-03-02T20:15:55.469249 #14246]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T20:15:55.480895 #14246]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (1.1ms)
+I, [2015-03-02T20:15:55.481127 #14246]  INFO -- : Completed 500 Internal Server Error in 12ms
+F, [2015-03-02T20:15:55.484344 #14246] FATAL -- : 
+ActionView::Template::Error (/home/rails/app/views/sessions/new.html.erb:19: syntax error, unexpected keyword_end
+';@output_buffer.append=( end );@output_buffer.to_s
+                             ^
+/home/rails/app/views/sessions/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+/home/rails/app/views/sessions/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'):
+    16:       </form>
+    17: 
+    18: <%= form_tag sessions_path do %>
+    19: <%= end %>
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__1059079595214923318__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2290178509531598167__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn:126:in `<top (required)>'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `load'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `<main>'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `eval'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-03-02T20:16:01.011694 #14249]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 20:16:01 +0000
+I, [2015-03-02T20:16:01.021309 #14249]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T20:16:01.027285 #14249]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (1.6ms)
+I, [2015-03-02T20:16:01.038169 #14249]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:16:01.039258 #14249]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:16:01.040534 #14249]  INFO -- : Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T20:16:37.965590 #14243]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 20:16:37 +0000
+I, [2015-03-02T20:16:37.971132 #14243]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T20:16:37.976620 #14243]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (1.5ms)
+I, [2015-03-02T20:16:37.976871 #14243]  INFO -- : Completed 500 Internal Server Error in 5ms
+F, [2015-03-02T20:16:37.982948 #14243] FATAL -- : 
+ActionView::Template::Error (/home/rails/app/views/sessions/new.html.erb:19: syntax error, unexpected keyword_end
+';@output_buffer.append=( end );@output_buffer.to_s
+                             ^
+/home/rails/app/views/sessions/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+/home/rails/app/views/sessions/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'):
+    16:       </form>
+    17: 
+    18: <%= form_for @i, :url => items_path, :html => { :multipart => true } do |f| %>
+    19: <%= end %>
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__1059079595214923318__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2290178509531598167__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn:126:in `<top (required)>'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `load'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `<main>'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `eval'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-03-02T20:17:08.708173 #14249]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 20:17:08 +0000
+I, [2015-03-02T20:17:08.710655 #14249]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T20:17:08.713796 #14249]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (1.1ms)
+I, [2015-03-02T20:17:08.713971 #14249]  INFO -- : Completed 500 Internal Server Error in 3ms
+F, [2015-03-02T20:17:08.717107 #14249] FATAL -- : 
+ActionView::Template::Error (/home/rails/app/views/sessions/new.html.erb:19: syntax error, unexpected keyword_end
+';@output_buffer.append=( end );@output_buffer.to_s
+                             ^
+/home/rails/app/views/sessions/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+/home/rails/app/views/sessions/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'):
+    16:       </form>
+    17: 
+    18: <%= form_for @i, :url => sessions_path, :html => { :multipart => true } do |f| %>
+    19: <%= end %>
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__1059079595214923318__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2290178509531598167__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn:126:in `<top (required)>'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `load'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `<main>'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `eval'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-03-02T20:22:16.566546 #14246]  INFO -- : Started GET "/login" for 123.125.71.50 at 2015-03-02 20:22:16 +0000
+I, [2015-03-02T20:22:16.575744 #14246]  INFO -- : Processing by SessionsController#new as */*
+I, [2015-03-02T20:22:16.607530 #14246]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (25.2ms)
+I, [2015-03-02T20:22:16.617483 #14246]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:22:16.617740 #14246]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:22:16.618331 #14246]  INFO -- : Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T20:35:08.242647 #14243]  INFO -- : Started GET "/" for 91.201.242.86 at 2015-03-02 20:35:08 +0000
+I, [2015-03-02T20:35:08.298337 #14243]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-03-02T20:35:08.319452 #14243]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T20:35:08.320036 #14243]  INFO -- :   Rendered home/index.html.erb within layouts/application (4.4ms)
+I, [2015-03-02T20:35:08.334389 #14243]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T20:35:08.335674 #14243]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:35:08.336813 #14243]  INFO -- : Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T20:52:14.661879 #15049]  INFO -- : Started GET "/" for 93.77.55.253 at 2015-03-02 20:52:14 +0000
+I, [2015-03-02T20:52:14.748068 #15049]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-03-02T20:52:14.790562 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T20:52:14.791293 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (4.1ms)
+I, [2015-03-02T20:52:14.809330 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:52:14.810358 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:52:14.811586 #15049]  INFO -- : Completed 200 OK in 63ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T20:59:33.484059 #15051]  INFO -- : Started GET "/" for 220.181.108.149 at 2015-03-02 20:59:33 +0000
+I, [2015-03-02T20:59:33.549806 #15051]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-02T20:59:33.566287 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:59:33.566595 #15051]  INFO -- :   Rendered home/index.html.erb within layouts/application (2.5ms)
+I, [2015-03-02T20:59:33.574456 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:59:33.575114 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:59:33.575746 #15051]  INFO -- : Completed 200 OK in 26ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T20:59:33.963650 #15058]  INFO -- : Started GET "/" for 220.181.108.148 at 2015-03-02 20:59:33 +0000
+I, [2015-03-02T20:59:34.036700 #15058]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-02T20:59:34.052897 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:59:34.053189 #15058]  INFO -- :   Rendered home/index.html.erb within layouts/application (2.7ms)
+I, [2015-03-02T20:59:34.062858 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:59:34.063487 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:59:34.064026 #15058]  INFO -- : Completed 200 OK in 27ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T20:59:40.692381 #15051]  INFO -- : Started GET "/" for 123.125.71.104 at 2015-03-02 20:59:40 +0000
+I, [2015-03-02T20:59:40.703567 #15051]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-02T20:59:40.712947 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:59:40.713566 #15051]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.0ms)
+I, [2015-03-02T20:59:40.724467 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T20:59:40.725304 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:59:40.726086 #15051]  INFO -- : Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T20:59:41.378011 #15058]  INFO -- : Started GET "/" for 123.125.71.85 at 2015-03-02 20:59:41 +0000
+I, [2015-03-02T20:59:41.381780 #15058]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-02T20:59:41.385198 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:59:41.385598 #15058]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.5ms)
+I, [2015-03-02T20:59:41.394174 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:59:41.394601 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T20:59:41.395075 #15058]  INFO -- : Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T21:14:52.827396 #15051]  INFO -- : Started GET "/oc/images/home_3.jpg" for 220.181.108.148 at 2015-03-02 21:14:52 +0000
+F, [2015-03-02T21:14:52.866043 #15051] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/oc/images/home_3.jpg"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn:126:in `<top (required)>'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `load'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `<main>'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `eval'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-03-02T21:36:25.577362 #15058]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 21:36:25 +0000
+I, [2015-03-02T21:36:25.747000 #15058]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T21:36:25.861045 #15058]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (103.4ms)
+I, [2015-03-02T21:36:25.871693 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T21:36:25.872288 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T21:36:25.873630 #15058]  INFO -- : Completed 200 OK in 126ms (Views: 121.3ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T21:37:05.483582 #15051]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 21:37:05 +0000
+I, [2015-03-02T21:37:05.572550 #15051]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T21:37:05.632168 #15051]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (48.8ms)
+I, [2015-03-02T21:37:05.644024 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T21:37:05.644725 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T21:37:05.645898 #15051]  INFO -- : Completed 200 OK in 73ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T21:42:26.864695 #15049]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 21:42:26 +0000
+I, [2015-03-02T21:42:26.922543 #15049]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T21:42:26.953795 #15049]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (25.5ms)
+I, [2015-03-02T21:42:26.960176 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T21:42:26.960543 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T21:42:26.961224 #15049]  INFO -- : Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T21:55:14.994881 #15051]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 21:55:14 +0000
+I, [2015-03-02T21:55:15.020201 #15051]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T21:55:15.126705 #15051]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (94.1ms)
+I, [2015-03-02T21:55:15.138584 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T21:55:15.139310 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T21:55:15.140135 #15051]  INFO -- : Completed 200 OK in 119ms (Views: 114.4ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T21:55:59.417107 #15055]  INFO -- : Started GET "/login" for 91.201.242.86 at 2015-03-02 21:55:59 +0000
+I, [2015-03-02T21:55:59.514040 #15055]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-02T21:55:59.567578 #15055]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (34.7ms)
+I, [2015-03-02T21:55:59.577893 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T21:55:59.578527 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T21:55:59.579570 #15055]  INFO -- : Completed 200 OK in 65ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T22:03:19.593898 #15049]  INFO -- : Started GET "/" for 182.118.55.176 at 2015-03-02 22:03:19 +0000
+I, [2015-03-02T22:03:19.624065 #15049]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-03-02T22:03:19.638588 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T22:03:19.639122 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.9ms)
+I, [2015-03-02T22:03:19.653837 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T22:03:19.654599 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T22:03:19.655389 #15049]  INFO -- : Completed 200 OK in 31ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T22:07:51.566173 #15051]  INFO -- : Started GET "/" for 220.181.108.111 at 2015-03-02 22:07:51 +0000
+I, [2015-03-02T22:07:51.585846 #15051]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-02T22:07:51.598737 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T22:07:51.599244 #15051]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.3ms)
+I, [2015-03-02T22:07:51.609840 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T22:07:51.610720 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T22:07:51.611871 #15051]  INFO -- : Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T22:07:52.032306 #15049]  INFO -- : Started GET "/" for 220.181.108.81 at 2015-03-02 22:07:52 +0000
+I, [2015-03-02T22:07:52.042961 #15049]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-02T22:07:52.050345 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T22:07:52.050603 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (2.3ms)
+I, [2015-03-02T22:07:52.056726 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T22:07:52.057360 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T22:07:52.058103 #15049]  INFO -- : Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T22:08:20.188031 #15051]  INFO -- : Started GET "/" for 123.125.71.30 at 2015-03-02 22:08:20 +0000
+I, [2015-03-02T22:08:20.193730 #15051]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-02T22:08:20.199950 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T22:08:20.200331 #15051]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.7ms)
+I, [2015-03-02T22:08:20.209070 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T22:08:20.209781 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T22:08:20.210415 #15051]  INFO -- : Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T22:08:20.872321 #15055]  INFO -- : Started GET "/" for 123.125.71.51 at 2015-03-02 22:08:20 +0000
+I, [2015-03-02T22:08:20.892916 #15055]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-02T22:08:20.908392 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T22:08:20.908892 #15055]  INFO -- :   Rendered home/index.html.erb within layouts/application (4.1ms)
+I, [2015-03-02T22:08:20.920742 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T22:08:20.921722 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T22:08:20.922848 #15055]  INFO -- : Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T22:22:27.132562 #15049]  INFO -- : Started GET "/" for 203.81.11.136 at 2015-03-02 22:22:27 +0000
+I, [2015-03-02T22:22:27.144819 #15049]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-03-02T22:22:27.151979 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T22:22:27.152360 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.3ms)
+I, [2015-03-02T22:22:27.163247 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T22:22:27.164152 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T22:22:27.165207 #15049]  INFO -- : Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T23:04:00.325368 #15058]  INFO -- : Started GET "/" for 220.181.108.105 at 2015-03-02 23:04:00 +0000
+I, [2015-03-02T23:04:00.359892 #15058]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-02T23:04:00.384437 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T23:04:00.384958 #15058]  INFO -- :   Rendered home/index.html.erb within layouts/application (2.5ms)
+I, [2015-03-02T23:04:00.398286 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T23:04:00.399516 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T23:04:00.400936 #15058]  INFO -- : Completed 200 OK in 41ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T23:04:00.789939 #15049]  INFO -- : Started GET "/" for 220.181.108.87 at 2015-03-02 23:04:00 +0000
+I, [2015-03-02T23:04:00.805280 #15049]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-02T23:04:00.881275 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T23:04:00.881733 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (66.4ms)
+I, [2015-03-02T23:04:00.892110 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T23:04:00.892978 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T23:04:00.893969 #15049]  INFO -- : Completed 200 OK in 88ms (Views: 86.1ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T23:04:03.093943 #15058]  INFO -- : Started GET "/" for 123.125.71.71 at 2015-03-02 23:04:03 +0000
+I, [2015-03-02T23:04:03.100892 #15058]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-02T23:04:03.109223 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T23:04:03.109634 #15058]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.8ms)
+I, [2015-03-02T23:04:03.117778 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-02T23:04:03.118207 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T23:04:03.118720 #15058]  INFO -- : Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+I, [2015-03-02T23:04:03.756619 #15049]  INFO -- : Started GET "/" for 123.125.71.71 at 2015-03-02 23:04:03 +0000
+I, [2015-03-02T23:04:03.761141 #15049]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-02T23:04:03.766664 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T23:04:03.766962 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.6ms)
+I, [2015-03-02T23:04:03.776160 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T23:04:03.776769 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-02T23:04:03.777370 #15049]  INFO -- : Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T00:05:00.429845 #15058]  INFO -- : Started GET "/" for 220.181.108.76 at 2015-03-03 00:05:00 +0000
+I, [2015-03-03T00:05:00.443298 #15058]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T00:05:00.498098 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T00:05:00.498414 #15058]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.6ms)
+I, [2015-03-03T00:05:00.505363 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T00:05:00.505817 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T00:05:00.506578 #15058]  INFO -- : Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T00:05:00.945358 #15055]  INFO -- : Started GET "/" for 220.181.108.119 at 2015-03-03 00:05:00 +0000
+I, [2015-03-03T00:05:00.978933 #15055]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T00:05:00.995628 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T00:05:00.996297 #15055]  INFO -- :   Rendered home/index.html.erb within layouts/application (2.3ms)
+I, [2015-03-03T00:05:01.011426 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T00:05:01.012740 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T00:05:01.014154 #15055]  INFO -- : Completed 200 OK in 35ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T00:05:02.575810 #15058]  INFO -- : Started GET "/" for 123.125.71.90 at 2015-03-03 00:05:02 +0000
+I, [2015-03-03T00:05:02.582363 #15058]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T00:05:02.590291 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T00:05:02.590704 #15058]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.2ms)
+I, [2015-03-03T00:05:02.603100 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T00:05:02.603999 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T00:05:02.604979 #15058]  INFO -- : Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T00:05:03.262025 #15055]  INFO -- : Started GET "/" for 123.125.71.75 at 2015-03-03 00:05:03 +0000
+I, [2015-03-03T00:05:03.264763 #15055]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T00:05:03.268587 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T00:05:03.268797 #15055]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.4ms)
+I, [2015-03-03T00:05:03.275328 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T00:05:03.276057 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T00:05:03.276749 #15055]  INFO -- : Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T00:42:53.018802 #15058]  INFO -- : Started GET "/" for 203.81.11.136 at 2015-03-03 00:42:53 +0000
+I, [2015-03-03T00:42:53.045541 #15058]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-03-03T00:42:53.069638 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T00:42:53.070599 #15058]  INFO -- :   Rendered home/index.html.erb within layouts/application (10.5ms)
+I, [2015-03-03T00:42:53.088454 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T00:42:53.090482 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T00:42:53.092093 #15058]  INFO -- : Completed 200 OK in 46ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T00:47:54.510924 #15049]  INFO -- : Started GET "/" for 220.181.108.145 at 2015-03-03 00:47:54 +0000
+I, [2015-03-03T00:47:54.531764 #15049]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T00:47:54.546375 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T00:47:54.546843 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.7ms)
+I, [2015-03-03T00:47:54.565129 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T00:47:54.566695 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T00:47:54.568290 #15049]  INFO -- : Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T00:47:54.960936 #15058]  INFO -- : Started GET "/" for 220.181.108.139 at 2015-03-03 00:47:54 +0000
+I, [2015-03-03T00:47:54.983223 #15058]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T00:47:54.998721 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T00:47:54.999746 #15058]  INFO -- :   Rendered home/index.html.erb within layouts/application (2.7ms)
+I, [2015-03-03T00:47:55.015688 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T00:47:55.017546 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T00:47:55.019251 #15058]  INFO -- : Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T00:48:00.545369 #15049]  INFO -- : Started GET "/" for 123.125.71.75 at 2015-03-03 00:48:00 +0000
+I, [2015-03-03T00:48:00.575585 #15049]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T00:48:00.617475 #15049]  INFO -- :   Rendered text template (0.2ms)
+I, [2015-03-03T00:48:00.618135 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (2.7ms)
+I, [2015-03-03T00:48:00.638494 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T00:48:00.639905 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T00:48:00.641471 #15049]  INFO -- : Completed 200 OK in 65ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T00:48:01.428753 #15051]  INFO -- : Started GET "/" for 123.125.71.84 at 2015-03-03 00:48:01 +0000
+I, [2015-03-03T00:48:01.454120 #15051]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T00:48:01.469464 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T00:48:01.469985 #15051]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.9ms)
+I, [2015-03-03T00:48:01.488248 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T00:48:01.493745 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T00:48:01.495692 #15051]  INFO -- : Completed 200 OK in 41ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T01:46:00.480016 #15055]  INFO -- : Started GET "/" for 220.181.108.139 at 2015-03-03 01:46:00 +0000
+I, [2015-03-03T01:46:00.503188 #15055]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T01:46:00.518911 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T01:46:00.519494 #15055]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.7ms)
+I, [2015-03-03T01:46:00.531116 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T01:46:00.532039 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T01:46:00.533075 #15055]  INFO -- : Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T01:46:00.924469 #15058]  INFO -- : Started GET "/" for 220.181.108.183 at 2015-03-03 01:46:00 +0000
+I, [2015-03-03T01:46:00.947461 #15058]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T01:46:00.962029 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T01:46:00.962596 #15058]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.8ms)
+I, [2015-03-03T01:46:00.978022 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T01:46:00.979303 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T01:46:00.980541 #15058]  INFO -- : Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T02:23:09.871150 #15055]  INFO -- : Started GET "/items" for 66.249.67.88 at 2015-03-03 02:23:09 +0000
+I, [2015-03-03T02:23:09.889487 #15055]  INFO -- : Processing by ItemsController#index as HTML
+I, [2015-03-03T02:23:09.998646 #15055]  INFO -- :   Rendered items/index.html.erb within layouts/application (92.7ms)
+I, [2015-03-03T02:23:10.004150 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T02:23:10.004408 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T02:23:10.005004 #15055]  INFO -- : Completed 200 OK in 115ms (Views: 96.8ms | ActiveRecord: 5.7ms)
+I, [2015-03-03T02:24:58.868131 #15051]  INFO -- : Started GET "/login" for 66.249.78.203 at 2015-03-03 02:24:58 +0000
+I, [2015-03-03T02:24:58.899943 #15051]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T02:24:58.935927 #15051]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (19.2ms)
+I, [2015-03-03T02:24:58.955011 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T02:24:58.957247 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T02:24:58.959009 #15051]  INFO -- : Completed 200 OK in 58ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T02:26:58.692482 #15049]  INFO -- : Started GET "/items/11" for 66.249.78.196 at 2015-03-03 02:26:58 +0000
+I, [2015-03-03T02:26:58.748707 #15049]  INFO -- : Processing by ItemsController#show as HTML
+I, [2015-03-03T02:26:58.748996 #15049]  INFO -- :   Parameters: {"id"=>"11"}
+I, [2015-03-03T02:26:58.912924 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T02:26:58.918981 #15049]  INFO -- :   Rendered items/show.html.erb within layouts/application (9.3ms)
+I, [2015-03-03T02:26:58.929859 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T02:26:58.930918 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T02:26:58.932349 #15049]  INFO -- : Completed 200 OK in 183ms (Views: 29.9ms | ActiveRecord: 36.0ms)
+I, [2015-03-03T02:28:42.884066 #15058]  INFO -- : Started GET "/items/12" for 66.249.78.248 at 2015-03-03 02:28:42 +0000
+I, [2015-03-03T02:28:42.926589 #15058]  INFO -- : Processing by ItemsController#show as HTML
+I, [2015-03-03T02:28:42.926895 #15058]  INFO -- :   Parameters: {"id"=>"12"}
+I, [2015-03-03T02:28:43.079520 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T02:28:43.085634 #15058]  INFO -- :   Rendered items/show.html.erb within layouts/application (9.1ms)
+I, [2015-03-03T02:28:43.096748 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T02:28:43.097705 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T02:28:43.098721 #15058]  INFO -- : Completed 200 OK in 171ms (Views: 28.3ms | ActiveRecord: 14.5ms)
+I, [2015-03-03T02:43:49.793729 #15055]  INFO -- : Started GET "/" for 203.81.11.136 at 2015-03-03 02:43:49 +0000
+I, [2015-03-03T02:43:49.818811 #15055]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-03-03T02:43:49.837050 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T02:43:49.837568 #15055]  INFO -- :   Rendered home/index.html.erb within layouts/application (6.6ms)
+I, [2015-03-03T02:43:49.858614 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T02:43:49.859972 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T02:43:49.861539 #15055]  INFO -- : Completed 200 OK in 42ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T02:46:50.541601 #15049]  INFO -- : Started GET "/" for 220.181.108.175 at 2015-03-03 02:46:50 +0000
+I, [2015-03-03T02:46:50.561561 #15049]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T02:46:50.588903 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T02:46:50.589513 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (2.1ms)
+I, [2015-03-03T02:46:50.606317 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T02:46:50.607504 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T02:46:50.608712 #15049]  INFO -- : Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T02:46:51.030340 #15055]  INFO -- : Started GET "/" for 220.181.108.157 at 2015-03-03 02:46:51 +0000
+I, [2015-03-03T02:46:51.041260 #15055]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T02:46:51.053230 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T02:46:51.053635 #15055]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.9ms)
+I, [2015-03-03T02:46:51.069999 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T02:46:51.071203 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T02:46:51.072431 #15055]  INFO -- : Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T02:46:52.791566 #15049]  INFO -- : Started GET "/" for 123.125.71.98 at 2015-03-03 02:46:52 +0000
+I, [2015-03-03T02:46:52.796605 #15049]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T02:46:52.803806 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T02:46:52.804375 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.0ms)
+I, [2015-03-03T02:46:52.814809 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T02:46:52.815569 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T02:46:52.816362 #15049]  INFO -- : Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T02:46:53.473863 #15055]  INFO -- : Started GET "/" for 123.125.71.85 at 2015-03-03 02:46:53 +0000
+I, [2015-03-03T02:46:53.476969 #15055]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T02:46:53.480427 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T02:46:53.480613 #15055]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.4ms)
+I, [2015-03-03T02:46:53.485288 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T02:46:53.485684 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T02:46:53.486034 #15055]  INFO -- : Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T03:48:08.519112 #15049]  INFO -- : Started GET "/" for 220.181.108.150 at 2015-03-03 03:48:08 +0000
+I, [2015-03-03T03:48:08.542650 #15049]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T03:48:08.561674 #15049]  INFO -- :   Rendered text template (0.2ms)
+I, [2015-03-03T03:48:08.562574 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (3.5ms)
+I, [2015-03-03T03:48:08.589942 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T03:48:08.592376 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T03:48:08.594728 #15049]  INFO -- : Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T03:48:09.022242 #15051]  INFO -- : Started GET "/" for 220.181.108.174 at 2015-03-03 03:48:09 +0000
+I, [2015-03-03T03:48:09.050021 #15051]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T03:48:09.074177 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T03:48:09.075298 #15051]  INFO -- :   Rendered home/index.html.erb within layouts/application (3.6ms)
+I, [2015-03-03T03:48:09.095761 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T03:48:09.097488 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T03:48:09.099642 #15051]  INFO -- : Completed 200 OK in 49ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T03:48:09.674694 #15049]  INFO -- : Started GET "/" for 123.125.71.101 at 2015-03-03 03:48:09 +0000
+I, [2015-03-03T03:48:09.682018 #15049]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T03:48:09.691657 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T03:48:09.692510 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.5ms)
+I, [2015-03-03T03:48:09.710213 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T03:48:09.711610 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T03:48:09.712862 #15049]  INFO -- : Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T03:48:10.361163 #15051]  INFO -- : Started GET "/" for 123.125.71.78 at 2015-03-03 03:48:10 +0000
+I, [2015-03-03T03:48:10.367741 #15051]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T03:48:10.378323 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T03:48:10.379012 #15051]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.2ms)
+I, [2015-03-03T03:48:10.395419 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T03:48:10.396845 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T03:48:10.398345 #15051]  INFO -- : Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T04:37:47.689472 #15049]  INFO -- : Started GET "/" for 61.240.144.66 at 2015-03-03 04:37:47 +0000
+I, [2015-03-03T04:37:47.705465 #15049]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T04:37:47.718188 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T04:37:47.718715 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.8ms)
+I, [2015-03-03T04:37:47.733609 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T04:37:47.734769 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T04:37:47.736112 #15049]  INFO -- : Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T04:44:53.465845 #15055]  INFO -- : Started GET "/" for 220.181.108.149 at 2015-03-03 04:44:53 +0000
+I, [2015-03-03T04:44:53.477659 #15055]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T04:44:53.486614 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T04:44:53.487013 #15055]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.5ms)
+I, [2015-03-03T04:44:53.498564 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T04:44:53.499546 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T04:44:53.500800 #15055]  INFO -- : Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T04:44:53.931498 #15058]  INFO -- : Started GET "/" for 220.181.108.186 at 2015-03-03 04:44:53 +0000
+I, [2015-03-03T04:44:53.940711 #15058]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T04:44:53.947396 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T04:44:53.947726 #15058]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.9ms)
+I, [2015-03-03T04:44:53.954632 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T04:44:53.955194 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T04:44:53.955931 #15058]  INFO -- : Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T04:44:54.611076 #15055]  INFO -- : Started GET "/" for 123.125.71.76 at 2015-03-03 04:44:54 +0000
+I, [2015-03-03T04:44:54.613337 #15055]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T04:44:54.616670 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T04:44:54.616859 #15055]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.4ms)
+I, [2015-03-03T04:44:54.621692 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T04:44:54.622040 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T04:44:54.622419 #15055]  INFO -- : Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T04:44:55.272586 #15049]  INFO -- : Started GET "/" for 123.125.71.79 at 2015-03-03 04:44:55 +0000
+I, [2015-03-03T04:44:55.277377 #15049]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T04:44:55.282133 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T04:44:55.282342 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.6ms)
+I, [2015-03-03T04:44:55.287857 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T04:44:55.288240 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T04:44:55.288759 #15049]  INFO -- : Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T04:54:02.902477 #15058]  INFO -- : Started GET "/" for 203.81.11.136 at 2015-03-03 04:54:02 +0000
+I, [2015-03-03T04:54:02.914730 #15058]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-03-03T04:54:02.922309 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T04:54:02.922999 #15058]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.9ms)
+I, [2015-03-03T04:54:02.936232 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T04:54:02.937408 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T04:54:02.938738 #15058]  INFO -- : Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T05:24:40.389276 #15055]  INFO -- : Started GET "/" for 198.186.192.44 at 2015-03-03 05:24:40 +0000
+I, [2015-03-03T05:24:40.399596 #15055]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-03-03T05:24:40.405353 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T05:24:40.405683 #15055]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.1ms)
+I, [2015-03-03T05:24:40.414308 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T05:24:40.415111 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T05:24:40.416019 #15055]  INFO -- : Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T05:52:15.413043 #15058]  INFO -- : Started GET "/" for 220.181.108.104 at 2015-03-03 05:52:15 +0000
+I, [2015-03-03T05:52:15.420553 #15058]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T05:52:15.426078 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T05:52:15.426307 #15058]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.7ms)
+I, [2015-03-03T05:52:15.433110 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T05:52:15.433696 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T05:52:15.434281 #15058]  INFO -- : Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T05:52:15.662410 #15051]  INFO -- : Started GET "/" for 123.125.71.49 at 2015-03-03 05:52:15 +0000
+I, [2015-03-03T05:52:15.669967 #15051]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T05:52:15.676079 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T05:52:15.676350 #15051]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.8ms)
+I, [2015-03-03T05:52:15.683154 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T05:52:15.684098 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T05:52:15.684984 #15051]  INFO -- : Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T05:52:15.821873 #15058]  INFO -- : Started GET "/" for 220.181.108.89 at 2015-03-03 05:52:15 +0000
+I, [2015-03-03T05:52:15.824419 #15058]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T05:52:15.827784 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T05:52:15.827985 #15058]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.4ms)
+I, [2015-03-03T05:52:15.832715 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T05:52:15.833182 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T05:52:15.833604 #15058]  INFO -- : Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T05:52:16.387644 #15051]  INFO -- : Started GET "/" for 123.125.71.25 at 2015-03-03 05:52:16 +0000
+I, [2015-03-03T05:52:16.390294 #15051]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T05:52:16.394876 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T05:52:16.395129 #15051]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.5ms)
+I, [2015-03-03T05:52:16.401332 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T05:52:16.401802 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T05:52:16.402386 #15051]  INFO -- : Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:09:34.771773 #15058]  INFO -- : Started GET "/" for 123.125.71.58 at 2015-03-03 07:09:34 +0000
+I, [2015-03-03T07:09:34.779186 #15058]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T07:09:34.784708 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:09:34.785015 #15058]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.8ms)
+I, [2015-03-03T07:09:34.791395 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:09:34.792047 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:09:34.792599 #15058]  INFO -- : Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:09:35.570726 #15049]  INFO -- : Started GET "/" for 123.125.71.17 at 2015-03-03 07:09:35 +0000
+I, [2015-03-03T07:09:35.578353 #15049]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T07:09:35.584555 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:09:35.584784 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.8ms)
+I, [2015-03-03T07:09:35.593825 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:09:35.594368 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:09:35.595168 #15049]  INFO -- : Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:09:38.553852 #15058]  INFO -- : Started GET "/" for 220.181.108.103 at 2015-03-03 07:09:38 +0000
+I, [2015-03-03T07:09:38.558375 #15058]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T07:09:38.565106 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:09:38.566241 #15058]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.5ms)
+I, [2015-03-03T07:09:38.577114 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:09:38.578002 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:09:38.578804 #15058]  INFO -- : Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:09:39.021679 #15049]  INFO -- : Started GET "/" for 220.181.108.83 at 2015-03-03 07:09:39 +0000
+I, [2015-03-03T07:09:39.027217 #15049]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T07:09:39.034925 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:09:39.035411 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.8ms)
+I, [2015-03-03T07:09:39.046727 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:09:39.047562 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:09:39.048686 #15049]  INFO -- : Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:12:29.933567 #15058]  INFO -- : Started GET "/users" for 91.201.244.150 at 2015-03-03 07:12:29 +0000
+I, [2015-03-03T07:12:29.962724 #15058]  INFO -- : Processing by UsersController#index as HTML
+I, [2015-03-03T07:12:30.022544 #15058]  INFO -- :   Rendered users/index.html.erb within layouts/application (34.7ms)
+I, [2015-03-03T07:12:30.029162 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:12:30.029723 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:12:30.030329 #15058]  INFO -- : Completed 200 OK in 67ms (Views: 42.2ms | ActiveRecord: 4.1ms)
+I, [2015-03-03T07:12:31.732670 #15051]  INFO -- : Started GET "/" for 91.201.244.150 at 2015-03-03 07:12:31 +0000
+I, [2015-03-03T07:12:31.739595 #15051]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-03-03T07:12:31.747918 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:12:31.748190 #15051]  INFO -- :   Rendered home/index.html.erb within layouts/application (3.5ms)
+I, [2015-03-03T07:12:31.758239 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:12:31.759541 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:12:31.760547 #15051]  INFO -- : Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:12:37.277910 #15058]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 07:12:37 +0000
+I, [2015-03-03T07:12:37.281467 #15058]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T07:12:37.289299 #15058]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (5.2ms)
+I, [2015-03-03T07:12:37.295819 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:12:37.296080 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:12:37.296605 #15058]  INFO -- : Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:14:03.335495 #15055]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 07:14:03 +0000
+I, [2015-03-03T07:14:03.351418 #15055]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T07:14:03.370343 #15055]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (11.0ms)
+I, [2015-03-03T07:14:03.377001 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:14:03.377589 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:14:03.378239 #15055]  INFO -- : Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:14:14.132936 #15051]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 07:14:14 +0000
+I, [2015-03-03T07:14:14.139439 #15051]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T07:14:14.153161 #15051]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (7.9ms)
+I, [2015-03-03T07:14:14.163278 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:14:14.163925 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:14:14.164810 #15051]  INFO -- : Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:16:25.373430 #15055]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 07:16:25 +0000
+I, [2015-03-03T07:16:25.383573 #15055]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T07:16:25.408637 #15055]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (12.6ms)
+I, [2015-03-03T07:16:25.410420 #15055]  INFO -- : Completed 500 Internal Server Error in 26ms
+F, [2015-03-03T07:16:25.422644 #15055] FATAL -- : 
+ActionView::Template::Error (wrong number of arguments (4 for 1..3)):
+     6: <h2 class="form-signin-heading">Войдите в Систему</h2>
+     7: <div class="form-group">
+     8: <%= label_tag 'email', 'Email', class: "sr-only" %>
+     9: <%= text_field_tag 'email','Email',nil, class: "form-control" %>
+    10: </div>
+    11: 
+    12: <div class="form-group">
+  app/views/sessions/new.html.erb:9:in `block in _app_views_sessions_new_html_erb__3142603131129309402_38428160'
+  app/views/sessions/new.html.erb:5:in `_app_views_sessions_new_html_erb__3142603131129309402_38428160'
+
+
+I, [2015-03-03T07:16:34.023347 #15051]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 07:16:34 +0000
+I, [2015-03-03T07:16:34.025855 #15051]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T07:16:34.033621 #15051]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (4.8ms)
+I, [2015-03-03T07:16:34.034301 #15051]  INFO -- : Completed 500 Internal Server Error in 8ms
+F, [2015-03-03T07:16:34.039440 #15051] FATAL -- : 
+ActionView::Template::Error (wrong number of arguments (4 for 1..3)):
+     6: <h2 class="form-signin-heading">Войдите в Систему</h2>
+     7: <div class="form-group">
+     8: <%= label_tag 'email', 'Email', class: "sr-only" %>
+     9: <%= text_field_tag 'email','Email',nil, class: "form-control" %>
+    10: </div>
+    11: 
+    12: <div class="form-group">
+  app/views/sessions/new.html.erb:9:in `block in _app_views_sessions_new_html_erb__3142603131129309402_36430880'
+  app/views/sessions/new.html.erb:5:in `_app_views_sessions_new_html_erb__3142603131129309402_36430880'
+
+
+I, [2015-03-03T07:26:39.547964 #15055]  INFO -- : Started GET "/" for 128.61.240.66 at 2015-03-03 07:26:39 +0000
+I, [2015-03-03T07:26:39.556353 #15055]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T07:26:39.569025 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:26:39.569550 #15055]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.8ms)
+I, [2015-03-03T07:26:39.585925 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:26:39.587217 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:26:39.589153 #15055]  INFO -- : Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:31:52.180217 #15051]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 07:31:52 +0000
+I, [2015-03-03T07:31:52.185766 #15051]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T07:31:52.193189 #15051]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (3.2ms)
+I, [2015-03-03T07:31:52.199432 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:31:52.199760 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:31:52.200308 #15051]  INFO -- : Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:34:07.837745 #15055]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 07:34:07 +0000
+I, [2015-03-03T07:34:07.847999 #15055]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T07:34:07.859304 #15055]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (4.3ms)
+I, [2015-03-03T07:34:07.871339 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:34:07.872228 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:34:07.873451 #15055]  INFO -- : Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:34:42.353031 #15058]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 07:34:42 +0000
+I, [2015-03-03T07:34:42.394696 #15058]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T07:34:42.426821 #15058]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (13.2ms)
+I, [2015-03-03T07:34:42.455546 #15058]  INFO -- :   Rendered text template (0.2ms)
+I, [2015-03-03T07:34:42.456681 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:34:42.458660 #15058]  INFO -- : Completed 200 OK in 63ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:35:13.661249 #15055]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 07:35:13 +0000
+I, [2015-03-03T07:35:13.669632 #15055]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T07:35:13.684920 #15055]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (6.7ms)
+I, [2015-03-03T07:35:13.696349 #15055]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:35:13.697092 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:35:13.698070 #15055]  INFO -- : Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:35:17.638751 #15058]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 07:35:17 +0000
+I, [2015-03-03T07:35:17.653364 #15058]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T07:35:17.676979 #15058]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (13.3ms)
+I, [2015-03-03T07:35:17.693146 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:35:17.694146 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:35:17.695856 #15058]  INFO -- : Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:36:35.645924 #15055]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 07:36:35 +0000
+I, [2015-03-03T07:36:35.653689 #15055]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T07:36:35.663101 #15055]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (4.5ms)
+I, [2015-03-03T07:36:35.671779 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:36:35.672373 #15055]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:36:35.673112 #15055]  INFO -- : Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:37:13.154935 #15051]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 07:37:13 +0000
+I, [2015-03-03T07:37:13.174062 #15051]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T07:37:13.195992 #15051]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (8.9ms)
+I, [2015-03-03T07:37:13.210734 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:37:13.211428 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:37:13.212707 #15051]  INFO -- : Completed 200 OK in 38ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:37:54.447261 #15049]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 07:37:54 +0000
+I, [2015-03-03T07:37:54.464070 #15049]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T07:37:54.478710 #15049]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (6.8ms)
+I, [2015-03-03T07:37:54.491239 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:37:54.491896 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:37:54.492831 #15049]  INFO -- : Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:38:56.934749 #15058]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 07:38:56 +0000
+I, [2015-03-03T07:38:56.965547 #15058]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T07:38:57.004655 #15058]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (18.4ms)
+I, [2015-03-03T07:38:57.024477 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:38:57.025270 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:38:57.026436 #15058]  INFO -- : Completed 200 OK in 60ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:39:03.523171 #15049]  INFO -- : Started POST "/sessions" for 91.201.244.150 at 2015-03-03 07:39:03 +0000
+I, [2015-03-03T07:39:03.543773 #15049]  INFO -- : Processing by SessionsController#create as HTML
+I, [2015-03-03T07:39:03.544164 #15049]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vr6hR/MCpKvm60D86W6+yYHRxrToHsR/QXRDZavrMKQ=", "email"=>"xtc.inside@gmail.com", "password"=>"[FILTERED]", "commit"=>"Войти"}
+I, [2015-03-03T07:39:03.792563 #15049]  INFO -- : Redirected to http://bombinside.info/items
+I, [2015-03-03T07:39:03.792994 #15049]  INFO -- : Completed 302 Found in 249ms (ActiveRecord: 14.7ms)
+I, [2015-03-03T07:39:03.863901 #15058]  INFO -- : Started GET "/items" for 91.201.244.150 at 2015-03-03 07:39:03 +0000
+I, [2015-03-03T07:39:03.877286 #15058]  INFO -- : Processing by ItemsController#index as HTML
+I, [2015-03-03T07:39:03.940867 #15058]  INFO -- :   Rendered items/index.html.erb within layouts/application (55.2ms)
+I, [2015-03-03T07:39:03.946827 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:39:03.947127 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:39:03.947760 #15058]  INFO -- : Completed 200 OK in 70ms (Views: 65.3ms | ActiveRecord: 1.1ms)
+I, [2015-03-03T07:39:15.500948 #15049]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 07:39:15 +0000
+I, [2015-03-03T07:39:15.506419 #15049]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T07:39:15.515512 #15049]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (3.4ms)
+I, [2015-03-03T07:39:15.521897 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:39:15.522181 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:39:15.522724 #15049]  INFO -- : Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:42:23.762919 #15058]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 07:42:23 +0000
+I, [2015-03-03T07:42:23.823759 #15058]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T07:42:23.857660 #15058]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (8.4ms)
+I, [2015-03-03T07:42:23.874242 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:42:23.874939 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:42:23.876411 #15058]  INFO -- : Completed 200 OK in 51ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:52:16.604079 #15051]  INFO -- : Started GET "/" for 220.181.108.171 at 2015-03-03 07:52:16 +0000
+I, [2015-03-03T07:52:16.622608 #15051]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T07:52:16.639214 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:52:16.639678 #15051]  INFO -- :   Rendered home/index.html.erb within layouts/application (2.0ms)
+I, [2015-03-03T07:52:16.655217 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:52:16.656709 #15051]  INFO -- :   Rendered text template (0.3ms)
+I, [2015-03-03T07:52:16.658016 #15051]  INFO -- : Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:52:17.105025 #22847]  INFO -- : Started GET "/" for 220.181.108.184 at 2015-03-03 07:52:17 +0000
+I, [2015-03-03T07:52:17.244863 #22847]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T07:52:17.276206 #22847]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:52:17.276662 #22847]  INFO -- :   Rendered home/index.html.erb within layouts/application (4.6ms)
+I, [2015-03-03T07:52:17.290845 #22847]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:52:17.292025 #22847]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:52:17.293697 #22847]  INFO -- : Completed 200 OK in 48ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:52:17.745995 #15051]  INFO -- : Started GET "/" for 123.125.71.80 at 2015-03-03 07:52:17 +0000
+I, [2015-03-03T07:52:17.766795 #15051]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T07:52:17.782890 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:52:17.783559 #15051]  INFO -- :   Rendered home/index.html.erb within layouts/application (2.0ms)
+I, [2015-03-03T07:52:17.802626 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:52:17.804248 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:52:17.805670 #15051]  INFO -- : Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:52:18.459982 #22847]  INFO -- : Started GET "/" for 123.125.71.69 at 2015-03-03 07:52:18 +0000
+I, [2015-03-03T07:52:18.467499 #22847]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T07:52:18.471132 #22847]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:52:18.471440 #22847]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.5ms)
+I, [2015-03-03T07:52:18.475846 #22847]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:52:18.476197 #22847]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:52:18.476555 #22847]  INFO -- : Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T07:57:30.561273 #15051]  INFO -- : Started GET "/items/1" for 91.201.244.150 at 2015-03-03 07:57:30 +0000
+I, [2015-03-03T07:57:30.585389 #15051]  INFO -- : Processing by ItemsController#show as HTML
+I, [2015-03-03T07:57:30.585697 #15051]  INFO -- :   Parameters: {"id"=>"1"}
+I, [2015-03-03T07:57:30.725388 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:57:30.728462 #15051]  INFO -- :   Rendered items/show.html.erb within layouts/application (4.8ms)
+I, [2015-03-03T07:57:30.734468 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T07:57:30.735102 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:57:30.735840 #15051]  INFO -- : Completed 200 OK in 150ms (Views: 16.6ms | ActiveRecord: 51.3ms)
+I, [2015-03-03T07:59:56.219009 #15058]  INFO -- : Started GET "/users" for 91.201.244.150 at 2015-03-03 07:59:56 +0000
+I, [2015-03-03T07:59:56.258936 #15058]  INFO -- : Processing by UsersController#index as HTML
+I, [2015-03-03T07:59:56.294733 #15058]  INFO -- :   Rendered users/index.html.erb within layouts/application (15.6ms)
+I, [2015-03-03T07:59:56.310713 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:59:56.312525 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T07:59:56.314138 #15058]  INFO -- : Completed 200 OK in 55ms (Views: 43.2ms | ActiveRecord: 1.3ms)
+I, [2015-03-03T08:01:57.164907 #15049]  INFO -- : Started POST "/sessions" for 91.201.244.150 at 2015-03-03 08:01:57 +0000
+I, [2015-03-03T08:01:57.174375 #15049]  INFO -- : Processing by SessionsController#create as HTML
+I, [2015-03-03T08:01:57.174733 #15049]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vr6hR/MCpKvm60D86W6+yYHRxrToHsR/QXRDZavrMKQ=", "email"=>"xtc.inside@gmail.com", "password"=>"[FILTERED]", "commit"=>"Войти"}
+I, [2015-03-03T08:01:57.267211 #15049]  INFO -- : Redirected to http://bombinside.info/items
+I, [2015-03-03T08:01:57.267794 #15049]  INFO -- : Completed 302 Found in 93ms (ActiveRecord: 1.1ms)
+I, [2015-03-03T08:01:57.346055 #15058]  INFO -- : Started GET "/items" for 91.201.244.150 at 2015-03-03 08:01:57 +0000
+I, [2015-03-03T08:01:57.355315 #15058]  INFO -- : Processing by ItemsController#index as HTML
+I, [2015-03-03T08:01:57.413811 #15058]  INFO -- :   Rendered items/index.html.erb within layouts/application (44.1ms)
+I, [2015-03-03T08:01:57.426969 #15058]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T08:01:57.427697 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:01:57.429220 #15058]  INFO -- : Completed 200 OK in 73ms (Views: 67.5ms | ActiveRecord: 1.9ms)
+I, [2015-03-03T08:02:03.993450 #15049]  INFO -- : Started GET "/logout" for 91.201.244.150 at 2015-03-03 08:02:03 +0000
+I, [2015-03-03T08:02:04.001938 #15049]  INFO -- : Processing by SessionsController#destroy as HTML
+I, [2015-03-03T08:02:04.004687 #15049]  INFO -- : Redirected to http://bombinside.info/
+I, [2015-03-03T08:02:04.005209 #15049]  INFO -- : Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+I, [2015-03-03T08:02:04.148602 #15058]  INFO -- : Started GET "/" for 91.201.244.150 at 2015-03-03 08:02:04 +0000
+I, [2015-03-03T08:02:04.153826 #15058]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-03-03T08:02:04.158183 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:02:04.158468 #15058]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.8ms)
+I, [2015-03-03T08:02:04.197987 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:02:04.198689 #15058]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:02:04.199177 #15058]  INFO -- : Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T08:22:48.746017 #15051]  INFO -- : Started GET "/" for 91.201.244.150 at 2015-03-03 08:22:48 +0000
+I, [2015-03-03T08:22:48.869009 #15051]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-03-03T08:22:48.875462 #15051]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:22:48.875767 #15051]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.9ms)
+I, [2015-03-03T08:22:48.879112 #15051]  INFO -- : Completed 500 Internal Server Error in 10ms
+F, [2015-03-03T08:22:48.884160 #15051] FATAL -- : 
+ActionView::Template::Error (/home/rails/app/views/layouts/application.html.erb:66: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...nd=( if current_user.present? );@output_buffer.safe_append='
+...                               ^
+/home/rails/app/views/layouts/application.html.erb:87: syntax error, unexpected keyword_else
+... ';@output_buffer.append=( else );@output_buffer.safe_append...
+...                               ^
+/home/rails/app/views/layouts/application.html.erb:93: syntax error, unexpected keyword_end, expecting ')'
+';                 end 
+                      ^
+/home/rails/app/views/layouts/application.html.erb:127: syntax error, unexpected keyword_ensure, expecting ')'
+/home/rails/app/views/layouts/application.html.erb:129: syntax error, unexpected keyword_end, expecting ')'):
+    63: 
+    64:             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    65: 
+    66:               <%= if current_user.present? %>
+    67: 
+    68: 
+    69:                 <ul class="nav navbar-nav">
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__2207958133595882787__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__4292631575765937606__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn:126:in `<top (required)>'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `load'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `<main>'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `eval'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-03-03T08:28:56.557832 #15058]  INFO -- : Started GET "/oc/images/home_6.jpg" for 220.181.108.155 at 2015-03-03 08:28:56 +0000
+F, [2015-03-03T08:28:56.701689 #15058] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/oc/images/home_6.jpg"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn:126:in `<top (required)>'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `load'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `<main>'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `eval'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-03-03T08:35:29.905240 #15049]  INFO -- : Started GET "/" for 91.201.244.150 at 2015-03-03 08:35:29 +0000
+I, [2015-03-03T08:35:29.980367 #15049]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-03-03T08:35:29.986881 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:35:29.987264 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.2ms)
+I, [2015-03-03T08:35:29.990248 #15049]  INFO -- : Completed 500 Internal Server Error in 10ms
+F, [2015-03-03T08:35:29.996083 #15049] FATAL -- : 
+ActionView::Template::Error (/home/rails/app/views/layouts/application.html.erb:66: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...nd=( if current_user.present? );@output_buffer.safe_append='
+...                               ^
+/home/rails/app/views/layouts/application.html.erb:87: syntax error, unexpected keyword_else
+... ';@output_buffer.append=( else );@output_buffer.safe_append...
+...                               ^
+/home/rails/app/views/layouts/application.html.erb:93: syntax error, unexpected keyword_end, expecting ')'
+';                 end 
+                      ^
+/home/rails/app/views/layouts/application.html.erb:127: syntax error, unexpected keyword_ensure, expecting ')'
+/home/rails/app/views/layouts/application.html.erb:129: syntax error, unexpected keyword_end, expecting ')'):
+    63: 
+    64:             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    65: 
+    66:               <%= if current_user.present? %>
+    67: 
+    68: 
+    69:                 <ul class="nav navbar-nav">
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__2207958133595882787__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__4292631575765937606__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn:126:in `<top (required)>'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `load'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `<main>'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `eval'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-03-03T08:40:23.460684 #15051]  INFO -- : Started GET "/" for 91.201.244.150 at 2015-03-03 08:40:23 +0000
+I, [2015-03-03T08:40:23.580738 #15051]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-03-03T08:40:23.590895 #15051]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T08:40:23.591392 #15051]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.4ms)
+I, [2015-03-03T08:40:23.595372 #15051]  INFO -- : Completed 500 Internal Server Error in 14ms
+F, [2015-03-03T08:40:23.603403 #15051] FATAL -- : 
+ActionView::Template::Error (/home/rails/app/views/layouts/application.html.erb:66: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...nd=( if current_user.present? );@output_buffer.safe_append='
+...                               ^
+/home/rails/app/views/layouts/application.html.erb:87: syntax error, unexpected keyword_else, expecting ')'
+';                   else 
+                         ^
+/home/rails/app/views/layouts/application.html.erb:93: syntax error, unexpected keyword_end, expecting ')'
+';                 end 
+                      ^
+/home/rails/app/views/layouts/application.html.erb:127: syntax error, unexpected keyword_ensure, expecting ')'
+/home/rails/app/views/layouts/application.html.erb:129: syntax error, unexpected keyword_end, expecting ')'):
+    63: 
+    64:             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    65: 
+    66:               <%= if current_user.present? %>
+    67: 
+    68: 
+    69:                 <ul class="nav navbar-nav">
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__2207958133595882787__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__4292631575765937606__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn:126:in `<top (required)>'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `load'
+  /usr/local/rvm/gems/ruby-2.1.3/bin/unicorn:23:in `<main>'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `eval'
+  /usr/local/rvm/gems/ruby-2.0.0-p353/bin/ruby_executable_hooks:15:in `<main>'
+
+
+I, [2015-03-03T08:55:11.501776 #22847]  INFO -- : Started GET "/" for 220.181.108.84 at 2015-03-03 08:55:11 +0000
+I, [2015-03-03T08:55:11.564416 #22847]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T08:55:11.570569 #22847]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:55:11.570823 #22847]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.8ms)
+I, [2015-03-03T08:55:11.577521 #22847]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:55:11.578048 #22847]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:55:11.578607 #22847]  INFO -- : Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T08:55:11.964762 #15049]  INFO -- : Started GET "/" for 220.181.108.94 at 2015-03-03 08:55:11 +0000
+I, [2015-03-03T08:55:11.988651 #15049]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T08:55:11.999462 #15049]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T08:55:11.999849 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (2.4ms)
+I, [2015-03-03T08:55:12.012686 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:55:12.013705 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:55:12.014643 #15049]  INFO -- : Completed 200 OK in 26ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T08:55:12.624133 #22847]  INFO -- : Started GET "/" for 123.125.71.82 at 2015-03-03 08:55:12 +0000
+I, [2015-03-03T08:55:12.627127 #22847]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T08:55:12.630244 #22847]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:55:12.630429 #22847]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.4ms)
+I, [2015-03-03T08:55:12.634717 #22847]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:55:12.635183 #22847]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:55:12.635558 #22847]  INFO -- : Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T08:55:13.297820 #15049]  INFO -- : Started GET "/" for 123.125.71.115 at 2015-03-03 08:55:13 +0000
+I, [2015-03-03T08:55:13.301224 #15049]  INFO -- : Processing by HomeController#index as */*
+I, [2015-03-03T08:55:13.306497 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:55:13.306840 #15049]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.7ms)
+I, [2015-03-03T08:55:13.314617 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:55:13.315173 #15049]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:55:13.315824 #15049]  INFO -- : Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T08:56:31.666892 #22847]  INFO -- : Started GET "/" for 203.81.11.136 at 2015-03-03 08:56:31 +0000
+I, [2015-03-03T08:56:31.669434 #22847]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-03-03T08:56:31.672394 #22847]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:56:31.672604 #22847]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.2ms)
+I, [2015-03-03T08:56:31.677442 #22847]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:56:31.677851 #22847]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T08:56:31.678308 #22847]  INFO -- : Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 I, [2015-03-03T09:17:12.600225 #882]  INFO -- : Started GET "/items" for 91.201.244.150 at 2015-03-03 09:17:12 +0000
+I, [2015-03-03T09:17:12.628506 #882]  INFO -- : Processing by ItemsController#index as HTML
+I, [2015-03-03T09:17:12.715951 #882]  INFO -- :   Rendered items/index.html.erb within layouts/application (65.0ms)
+I, [2015-03-03T09:17:12.731887 #882]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T09:17:12.732473 #882]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T09:17:12.733681 #882]  INFO -- : Completed 200 OK in 105ms (Views: 81.2ms | ActiveRecord: 5.5ms)
+I, [2015-03-03T09:17:28.456221 #885]  INFO -- : Started GET "/login" for 91.201.244.150 at 2015-03-03 09:17:28 +0000
+I, [2015-03-03T09:17:28.487365 #885]  INFO -- : Processing by SessionsController#new as HTML
+I, [2015-03-03T09:17:28.511142 #885]  INFO -- :   Rendered sessions/new.html.erb within layouts/application (6.3ms)
+I, [2015-03-03T09:17:28.525430 #885]  INFO -- :   Rendered text template (0.1ms)
+I, [2015-03-03T09:17:28.526013 #885]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T09:17:28.527263 #885]  INFO -- : Completed 200 OK in 39ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+I, [2015-03-03T09:17:30.615537 #890]  INFO -- : Started POST "/sessions" for 91.201.244.150 at 2015-03-03 09:17:30 +0000
+I, [2015-03-03T09:17:30.644025 #890]  INFO -- : Processing by SessionsController#create as HTML
+I, [2015-03-03T09:17:30.644199 #890]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vr6hR/MCpKvm60D86W6+yYHRxrToHsR/QXRDZavrMKQ=", "email"=>"xtc.inside@gmail.com", "password"=>"[FILTERED]", "commit"=>"Войти"}
+I, [2015-03-03T09:17:30.789477 #890]  INFO -- : Redirected to http://bombinside.info/items
+I, [2015-03-03T09:17:30.789983 #890]  INFO -- : Completed 302 Found in 146ms (ActiveRecord: 5.6ms)
+I, [2015-03-03T09:17:30.857834 #885]  INFO -- : Started GET "/items" for 91.201.244.150 at 2015-03-03 09:17:30 +0000
+I, [2015-03-03T09:17:30.861623 #885]  INFO -- : Processing by ItemsController#index as HTML
+I, [2015-03-03T09:17:30.912572 #885]  INFO -- :   Rendered items/index.html.erb within layouts/application (46.3ms)
+I, [2015-03-03T09:17:30.918179 #885]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T09:17:30.918561 #885]  INFO -- :   Rendered text template (0.0ms)
+I, [2015-03-03T09:17:30.919137 #885]  INFO -- : Completed 200 OK in 57ms (Views: 51.4ms | ActiveRecord: 3.1ms)

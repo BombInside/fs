@@ -62,6 +62,10 @@
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+              <% if current_user.present? %>
+
+
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="<%= items_path %>">Заявки</a>
@@ -72,12 +76,21 @@
                     <li>
                         <a href="#">Contact</a>
                       </li> -->
-                </ul>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+
+                      <li>
+                        <a href="<%= logout_path %>"> Выйти  </a>
+                      </li>
+
+                    </ul>
+                  <% else %>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="<%= login_path %>">Войти</a>
                     </li>
-                </ul>
+                  </ul>
+                <% end %>
             </div>
 
         </div>
